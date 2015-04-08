@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 20150408201305) do
 
   create_table "visits", force: true do |t|
     t.integer  "visitor_id"
-    t.integer  "short_url"
+    t.integer  "short_url_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   add_index "visits", ["created_at"], name: "index_visits_on_created_at"
-  add_index "visits", ["short_url"], name: "index_visits_on_short_url"
+  add_index "visits", ["short_url_id"], name: "index_visits_on_short_url_id"
   add_index "visits", ["updated_at"], name: "index_visits_on_updated_at"
   add_index "visits", ["visitor_id"], name: "index_visits_on_visitor_id"
 
