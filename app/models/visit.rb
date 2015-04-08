@@ -1,3 +1,5 @@
+
+
 class Visit < ActiveRecord::Base
   validates :visitor_id, :presence => true
   validates :short_url_id, :presence => true
