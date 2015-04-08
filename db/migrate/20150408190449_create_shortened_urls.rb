@@ -6,5 +6,7 @@ class CreateShortenedUrls < ActiveRecord::Migration
       t.integer :submitter_id
       t.timestamps
     end
+    add_index(:shortened_urls, :submitter_id, unique: true)
+    add_index(:shortened_urls, :short_url, unique: true)
   end
 end
